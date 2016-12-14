@@ -48,7 +48,7 @@ class BaseVC: UIViewController, LeftMenuDelegate {
         
         let topViewController : UIViewController = self.navigationController!.topViewController!
         
-        if (topViewController.restorationIdentifier! == destViewController.restorationIdentifier!){
+        if (topViewController.restorationIdentifier == destViewController.restorationIdentifier){
             print("Same VC")
         } else {
             self.navigationController!.pushViewController(destViewController, animated: true)

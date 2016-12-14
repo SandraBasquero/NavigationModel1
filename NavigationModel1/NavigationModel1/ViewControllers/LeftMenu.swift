@@ -22,15 +22,25 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableMenuOptions.tableFooterView = UIView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateArrayMenuOptions()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Fill menu with options
+    func updateArrayMenuOptions(){
+        arrayMenuOptions.append(["title":"Home"])
+        arrayMenuOptions.append(["title":"Play"])
+        tableMenuOptions.reloadData()
+    }
     
      // MARK: - Close Left Menu
     @IBAction func closeLeftMenu(_ button: UIButton!) {
@@ -56,6 +66,11 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     // MARK: - Table View
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayMenuOptions.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellMenu")!
         
@@ -77,10 +92,6 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let btn = UIButton(type: UIButtonType.custom)
         btn.tag = indexPath.row
         self.closeLeftMenu(btn)
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayMenuOptions.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
