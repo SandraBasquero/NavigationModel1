@@ -99,7 +99,7 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let imgIcon : UIImageView = cell.contentView.viewWithTag(99) as! UIImageView
         //imgIcon.image = UIImage(named:"HomeIcon")
         //imgIcon.tintColor = UIColor.red
-        imgIcon.layer .addSublayer(getIconImage(optNum: indexPath.row))
+        imgIcon.layer.addSublayer(getIconImage(optNum: indexPath.row))
         
         lblTitle.text = arrayMenuOptions[indexPath.row]["title"]!
         
