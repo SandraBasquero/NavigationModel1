@@ -48,8 +48,8 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: - Fill array with options for the menu
     //========================================================================
     func updateArrayMenuOptions(){
-        arrayMenuOptions.append(["title":"Inicio"])
-        arrayMenuOptions.append(["title":"Actualidad"])
+        arrayMenuOptions.append(["title":"Inicio", "icon":"HomeIcon"])
+        arrayMenuOptions.append(["title":"Actualidad", "icon":"iconos-39-20px"])
         tableMenuOptions.reloadData()
     }
     
@@ -97,14 +97,14 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let lblTitle : UILabel = cell.contentView.viewWithTag(101) as! UILabel
         let imgIcon : UIImageView = cell.contentView.viewWithTag(99) as! UIImageView
-        //imgIcon.image = UIImage(named:"HomeIcon")
-        //imgIcon.tintColor = UIColor.red
-        imgIcon.layer.addSublayer(getIconImage(optNum: indexPath.row))
         
         lblTitle.text = arrayMenuOptions[indexPath.row]["title"]!
+        imgIcon.image = UIImage(named: arrayMenuOptions[indexPath.row]["icon"]!)
+        imgIcon.tintColor = UIColor.white
         
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let btn = UIButton(type: UIButtonType.custom)
@@ -116,25 +116,5 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 1;
     }
     
-    
-    //========================================================================
-    // MARK: - Utils
-    //========================================================================
-    func getIconImage(optNum:Int) -> CAShapeLayer {
-        let pathz:UIBezierPath?
-        
-        switch optNum {
-        case 0:
-             pathz = UIBezierPath(svgPath: "M33,14.8c0-0.2,0-0.4-0.2-0.6L19.5,2c-0.3-0.2-0.6-0.2-0.9,0L5.3,13.9C5.3,13.9,5.2,14,5.2,14H5.1v18.3c0,0.7,0.6,1.2,1.3,1.2H14v0.8h1.3V24.1h7.5v10.2h1.3v-0.8h7.5c0.7,0,1.3-0.5,1.3-1.2L33,14.8L33,14.8z M31.7,32.2h-7.5v-8.8c0-0.4-0.3-0.7-0.7-0.7h-8.9c-0.4,0-0.7,0.3-0.7,0.7v8.8l-7.5,0V14.6L19,3.3L31.7,15V32.2z")
-        case 1:
-            pathz = UIBezierPath(svgPath: "M18,35C8.8,35,1.4,27.6,1.4,18.6c0-7.3,5-13.8,12-15.8c0.4-0.1,0.8,0.1,0.9,0.5c0.1,0.4-0.1,0.8-0.5,0.9 c-6.5,1.8-11,7.8-11,14.4c0,8.3,6.8,15,15.2,15s15.2-6.7,15.2-15c0-6-3.6-11.5-9.3-13.8c-0.4-0.2-0.6-0.6-0.4-1 c0.2-0.4,0.6-0.6,1-0.4c6.2,2.6,10.2,8.5,10.2,15.2C34.6,27.6,27.2,35,18,35z M23.7,13.5c-0.4,0-0.7-0.3-0.7-0.7V2h10.9c0.4,0,0.7,0.3,0.7,0.7s-0.3,0.7-0.7,0.7h-9.5v9.3C24.4,13.2,24.1,13.5,23.7,13.5z M25.5,21.3h-10V10.1c0-0.4,0.3-0.7,0.7-0.7S17,9.7,17,10.1v9.7h8.5c0.4,0,0.7,0.3,0.7,0.7S25.9,21.3,25.5,21.3z")
-        default:
-            pathz = nil
-        }
-        
-        let icon:CAShapeLayer = CAShapeLayer()
-        icon.path = pathz?.cgPath
-        return icon
-    }
     
 }
