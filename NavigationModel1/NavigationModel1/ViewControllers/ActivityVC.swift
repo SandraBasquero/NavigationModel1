@@ -1,18 +1,19 @@
 //
-//  HomeVC.swift
+//  ActivityVC.swift
 //  NavigationModel1
 //
-//  Created by X50207BA on 14/12/16.
+//  Created by X50207BA on 16/12/16.
 //  Copyright © 2016 Sandra. All rights reserved.
 //
 
 import UIKit
 
-class HomeVC: BaseVC {
+class ActivityVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

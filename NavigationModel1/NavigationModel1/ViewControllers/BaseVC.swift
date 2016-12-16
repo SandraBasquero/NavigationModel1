@@ -28,15 +28,11 @@ class BaseVC: UIViewController, LeftMenuDelegate {
         switch(index){
         case 0:
             print("Home\n", terminator: "")
-            
             self.openViewControllerBasedOnIdentifier("HomeVC")
-            
             break
         case 1:
-            print("Play\n", terminator: "")
-            
-            //self.openViewControllerBasedOnIdentifier("PlayVC")
-            
+            print("Activity\n", terminator: "")
+            self.openViewControllerBasedOnIdentifier("ActivityVC")
             break
         default:
             print("default\n", terminator: "")
@@ -45,7 +41,6 @@ class BaseVC: UIViewController, LeftMenuDelegate {
     
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String){
         let destViewController : UIViewController = self.storyboard!.instantiateViewController(withIdentifier: strIdentifier)
-        
         let topViewController : UIViewController = self.navigationController!.topViewController!
         
         if (topViewController.restorationIdentifier == destViewController.restorationIdentifier){

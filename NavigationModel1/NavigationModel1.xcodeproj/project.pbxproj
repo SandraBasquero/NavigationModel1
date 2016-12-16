@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0B79941E04060A00CF7FD4 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B79931E04060A00CF7FD4 /* ActivityVC.swift */; };
 		EBD2360B1E018E5100C99070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD2360A1E018E5100C99070 /* AppDelegate.swift */; };
 		EBD236101E018E5100C99070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD2360E1E018E5100C99070 /* Main.storyboard */; };
 		EBD236131E018E5100C99070 /* NavigationModel1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBD236111E018E5100C99070 /* NavigationModel1.xcdatamodeld */; };
@@ -129,6 +130,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB0B79931E04060A00CF7FD4 /* ActivityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		EBD236071E018E5100C99070 /* NavigationModel1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationModel1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD2360A1E018E5100C99070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD2360F1E018E5100C99070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				EBD236201E018F5400C99070 /* HomeVC.swift */,
 				EBD2362C1E01AB0000C99070 /* BaseVC.swift */,
 				EBD2362A1E01A14D00C99070 /* LeftMenu.swift */,
+				EB0B79931E04060A00CF7FD4 /* ActivityVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				EBD2362B1E01A14D00C99070 /* LeftMenu.swift in Sources */,
 				EBD2360B1E018E5100C99070 /* AppDelegate.swift in Sources */,
 				EBD236131E018E5100C99070 /* NavigationModel1.xcdatamodeld in Sources */,
+				EB0B79941E04060A00CF7FD4 /* ActivityVC.swift in Sources */,
 				EBD2362D1E01AB0000C99070 /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
