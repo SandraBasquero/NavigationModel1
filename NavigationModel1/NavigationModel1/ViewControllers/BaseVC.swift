@@ -86,6 +86,7 @@ class BaseVC: UIViewController, LeftMenuDelegate {
             return
         }
         
+        //self.navigationController?.toolbar.layer.zPosition = -1
         sender.isEnabled = false
         sender.tag = 10
         
@@ -96,13 +97,16 @@ class BaseVC: UIViewController, LeftMenuDelegate {
         self.addChildViewController(menuVC)
         menuVC.view.layoutIfNeeded()
         
-        
         menuVC.view.frame=CGRect(x: 0 - UIScreen.main.bounds.size.width, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
         
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
             menuVC.view.frame=CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
             sender.isEnabled = true
         }, completion:nil)
+        
+        //self.edgesForExtendedLayout = .top
+        //self.extendedLayoutIncludesOpaqueBars = true
+        //menuVC.view.layer.zPosition = 4
     }
 
 }
