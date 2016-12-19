@@ -75,6 +75,10 @@ class LeftMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
             self.view.removeFromSuperview()
             self.removeFromParentViewController()
         })
+        
+        self.view.layer.zPosition = -1
+        self.navigationController?.toolbar.layer.zPosition = 0
+        self.navigationController?.navigationBar.layer.zPosition = 0
     }
 
     //========================================================================

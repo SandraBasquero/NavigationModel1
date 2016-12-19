@@ -104,7 +104,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="307" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ehJ-qB-KQc" id="XUb-FP-tSa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="47"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-X9-0h9">
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyQ-P5-fpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-289" y="790"/>
+            <point key="canvasLocation" x="-425" y="789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CVh-1j-PaT">
